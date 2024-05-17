@@ -1,0 +1,135 @@
+/* src/Services.css */
+.services-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-intro {
+  background: #ffffff;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.services-intro p {
+  text-align: justify;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 90%;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  width: calc(33% - 40px);
+  /* Adjust width to fit 3 cards per row with gap */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h2 {
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.contact-section {
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 50px;
+  width: 90%;
+}
+
+.contact-link {
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #005f73;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .service-card {
+    width: calc(50% - 30px);
+    /* Adjust width to fit 2 cards per row with gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-page {
+    padding: 20px;
+  }
+
+  .services-intro,
+  .service-card,
+  .contact-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .services-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .services-intro p,
+  .service-card p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .contact-link {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .service-card img {
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .service-card {
+    width: 100%;
+    /* Adjust width to fit 1 card per row */
+  }
+}
